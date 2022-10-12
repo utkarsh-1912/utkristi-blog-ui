@@ -23,7 +23,7 @@ interface IPropType {
     slug: string;
 };
 
-const category = ({categories,articles,slug}:IPropType) => {
+const Category = ({categories,articles,slug}:IPropType) => {
   const { page, pageCount } = articles.pagination;
   const Router = useRouter();
   const { category: categorySlug } = Router.query;
@@ -98,4 +98,4 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
     };
 };
 
-export default category;
+export default Category;
