@@ -25,15 +25,15 @@ interface IPropType {
 
 const category = ({categories,articles,slug}:IPropType) => {
   const { page, pageCount } = articles.pagination;
-  const router = useRouter();
-  const { category: categorySlug } = router.query;
+  const Router = useRouter();
+  const { category: categorySlug } = Router.query;
 
   
   const formatedCategory = ()=>{
      return capitalizeFirstLetter(makeCategory(slug));
   }
   const handleSearch = (query: string) => {
-        router.push(`/category/${categorySlug}/?search=${query}`);
+        Router.push(`/category/${categorySlug}/?search=${query}`);
   };
 
   return (

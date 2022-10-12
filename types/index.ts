@@ -88,8 +88,8 @@ attributes:IArticlesAttribute;
 
 export interface IArticlesAttribute{
 Title: string;
-ShortDescription: string;
-Body: string | MDXRemoteSerializeResult ;
+ShortDescription: string ;
+Body: string | MDXRemoteSerializeResult | Record<string, string> ;
 Slug: string;
 Image:IImageData;
 createdAt: string;

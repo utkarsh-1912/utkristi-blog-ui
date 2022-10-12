@@ -5,7 +5,7 @@ const Footer = () => {
   return (
       <footer className="text-gray-600 px-2 md:mt-16 md:fixed bottom-0 left-0 bg-white w-full">
             <div className="container mx-auto flex items-center flex-col sm:flex-row py-1 md:py-6">
-            <a href="/" className='flex items-center justify-center md:justify-start'>
+            <a href="#" className='flex items-center justify-center md:justify-start'>
                 <Image src="/logo.png" height={40} width={45}/>
                 <span className="ml-3 text-md text-gray-500"style={{'fontSize':'24px'}}>Utkristi <i className="mr-1 text-primary">B</i>logs</span>
             </a>

@@ -40,13 +40,14 @@ const slug = ({ article, notFound = false }: IPropType) => {
                                 src={`${API_BASE_URL}${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`}
                                 height={40}
                                 width={40}
+                                alt={article.attributes.author.data.attributes.username}
                             />
                         </div>
                         <span className="text-md font-bold text-primary">{article.attributes.author.data.attributes.firstname}{' '}{article.attributes.author.data.attributes.lastname} <span className="text-sm text-gray-400">on</span>&nbsp;<span className="text-gray-500">{formatDate(article.attributes.createdAt)}</span>
                         </span>
                     </div>
                     <div className="text-lg text-gray-600 leading-8">
-                        <img
+                        <Image
                             className="md:w-full w-auto my-12 mb-6"
                             src={`${API_BASE_URL}${article.attributes.Image.data.attributes.url}`}
                             alt={article.attributes.Title}
@@ -166,7 +167,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
     return {
         props: {
-            article: await serializeMarkdown(articles.data[0]),
+            article: await articles.data[0],
         },
     };
 };
