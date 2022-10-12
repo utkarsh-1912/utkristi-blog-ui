@@ -47,7 +47,7 @@ const slug = ({ article, notFound = false }: IPropType) => {
                         </span>
                     </div>
                     <div className="text-lg text-gray-600 leading-8">
-                        <Image
+                        <img
                             className="md:w-full w-auto my-12 mb-6"
                             src={`${API_BASE_URL}${article.attributes.Image.data.attributes.url}`}
                             alt={article.attributes.Title}
@@ -56,7 +56,7 @@ const slug = ({ article, notFound = false }: IPropType) => {
                             {...(article.attributes
                                 .Body as MDXRemoteSerializeResult)}
                         />:'' } */}
-                        <ReactMarkdown children = {article.attributes.Body}/>
+                        <ReactMarkdown>{article.attributes.Body}</ReactMarkdown> 
                     </div>
                 </div>
         {/* ================================ Right Div ====================================== */}
