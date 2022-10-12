@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@200&family=Charm:wght@700&family=Quicksand:wght@500&family=Signika:wght@400;500;600;700&family=Ubuntu:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar{
+  width:6px;
+  height: 2px;
+}
+::-webkit-scrollbar-track{
+  background-color: #e2f5ffd6;
+}
+::-webkit-scrollbar-thumb{
+  background-color: #76c6f4;
+  border-radius: 3px;
+}
+
+@layer components{
+  .disabled{
+    @apply opacity-60 cursor-not-allowed
+  }
+  .single-article h1{
+    @apply text-3xl font-bold py-2;
+  }
+  .single-article h2 {
+    @apply text-xl font-bold py-2;
+  }
+  .single-article h3 {
+    @apply text-lg font-bold py-2;
+  }
+  .single-article h4 {
+    @apply text-lg font-bold py-2;
+  }
+  .single-article pre{
+    @apply text-gray-200 bg-gradient-to-l from-primary to-primary-dark my-4 py-4 px-4 overflow-auto;
+  }
+  .single-article blockquote {
+    @apply my-4 p-4 border-l-4 bg-gray-100 text-gray-500 border-primary;
+  }
+}
+/* html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+} */
