@@ -66,7 +66,7 @@ const Navbar = () => {
             <li className='mr-2 font-medium text-gray-600'><a href="#" className='rounded-md border border-primary-300 bg-primary py-1 px-4 text-white text-sm font-medium text-white-700 shadow-sm hover:bg-primary-200 transition-all' style={{whiteSpace: "nowrap"}}>Sign In</a></li>
         </ul>
         <ul className="flex md:hidden items-center">
-            <li className='mr-2 font-medium text-gray-600'><a href="#" className='rounded-md border border-primary-300 bg-primary py-1 px-4 text-white text-sm font-medium text-white-700 shadow-sm hover:bg-primary-200 transition-all' style={{whiteSpace: "nowrap"}}>SignIn | Login</a></li>
+            <li className='mr-2 font-medium text-gray-600'><a href="#" className='rounded-md border border-primary-300 bg-primary py-2 px-4 text-white text-sm font-medium text-white-700 shadow-sm hover:bg-primary-200 transition-all' style={{whiteSpace: "nowrap"}}>SignIn | Login</a></li>
         </ul>
       </nav>
     </div>
