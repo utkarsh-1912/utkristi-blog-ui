@@ -167,7 +167,7 @@ export const getServerSideProps: GetServerSideProps = async ({ query }) => {
 
     return {
         props: {
-            article: await articles.data[0],
+            article: await serializeMarkdown(articles.data[0]),
         },
     };
 };
