@@ -89,7 +89,7 @@ attributes:IArticlesAttribute;
 export interface IArticlesAttribute{
 Title: string;
 ShortDescription: string ;
-Body: string | MDXRemoteSerializeResult | Record<string, string> ;
+Body: string | MDXRemoteSerializeResult;
 Slug: string;
 Image:IImageData;
 createdAt: string;
