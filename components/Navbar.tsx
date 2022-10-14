@@ -1,9 +1,10 @@
-import React , {useState} from 'react';
+import React , {useState , useEffect} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
 const Navbar = () => {
   const [navbar,setNavbar] = useState(false);
+  useEffect(()=>{},[navbar]);
   return (
     <div>
       <nav className='flex item-center justify-between py-4 px-2 border-b-2 border-gray-100'>
