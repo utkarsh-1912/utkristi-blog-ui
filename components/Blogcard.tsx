@@ -10,8 +10,10 @@ interface IPropType{
 const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:1337";
 
 const Blogcard = ({article}:IPropType) => {
-  const IMAGE_URL = `${API_BASE_URL}${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`||"https://img.freepik.com/premium-vector/man-avatar-profile-round-icon_24640-14044.jpg";
-  return (
+  // const IMAGE_URL = `${API_BASE_URL}${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`||"https://img.freepik.com/premium-vector/man-avatar-profile-round-icon_24640-14044.jpg";
+  const IMAGE_URL = "https://utkristi-io.netlify.app/assets/img/favicon.jpg";
+    
+    return (
     <Link href={`/article/${article.attributes.Slug}`}>
     <div className='hover:outline hover:outline-2 outline-offset-2 outline-gray-200 py-3 px-3 rounded rounded-2 cursor-pointer'>
       <h1 className="text-l text-gray-600 font-bold hover:decoration-2 hover:underline hover:decoration-primary hover:cursor-pointer">{article.attributes.Title}</h1>
