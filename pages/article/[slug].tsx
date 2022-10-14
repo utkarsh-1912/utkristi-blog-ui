@@ -17,7 +17,10 @@ interface IPropType {
 const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:1337";
 
 const slug = ({ article, notFound = false }: IPropType) => {
-
+    //const AVATAR_URL =`${API_BASE_URL}${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`;
+    const AVATAR_URL ="https://utkristi-io.netlify.app/assets/img/favicon.jpg";
+    //const ARTICLE_IMG_URL = `${API_BASE_URL}${article.attributes.Image.data.attributes.url}`;
+    const ARTICLE_IMG_URL = "https://jumpseller.com/images/learn/create-a-blog/blog.jpg"
     return (
         <div className='px-3'>
             <Head>
@@ -37,7 +40,7 @@ const slug = ({ article, notFound = false }: IPropType) => {
                     <div className="flex items-center my-4">
                         <div className="rounded-lg overflow-hidden flex items-center justify-center mr-2">
                             <Image
-                                src={`${API_BASE_URL}${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`}
+                                src={AVATAR_URL}
                                 height={40}
                                 width={40}
                                 alt={article.attributes.author.data.attributes.username}
@@ -49,7 +52,7 @@ const slug = ({ article, notFound = false }: IPropType) => {
                     <div className="text-lg text-gray-600 leading-8">
                         <img
                             className="md:w-full w-auto my-12 mb-6"
-                            src={`${API_BASE_URL}${article.attributes.Image.data.attributes.url}`}
+                            src={ARTICLE_IMG_URL}
                             alt={article.attributes.Title}
                         />
                         {/* {article.attributes.Body?<MDXRemote
