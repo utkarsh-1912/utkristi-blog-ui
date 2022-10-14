@@ -7,10 +7,10 @@ import { IArticle } from '../types'
 interface IPropType{
     article:IArticle;
 }
+const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:1337";
+
 const Blogcard = ({article}:IPropType) => {
   
-  const API_BASE_URL = "http://localhost:1337"
-
   return (
     <Link href={`/article/${article.attributes.Slug}`}>
     <div className='hover:outline hover:outline-2 outline-offset-2 outline-gray-200 py-3 px-3 rounded rounded-2 cursor-pointer'>
