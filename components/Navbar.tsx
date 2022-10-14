@@ -42,7 +42,7 @@ const Navbar = () => {
                     </svg>
                   )}
                 </button>
-        <ul className={`justify-content-center pb-3 mt-8 block ${navbar?'block':'hidden'} transition-all fixed w-full bg-white items-center`} style={{borderRadius:"0 5px 5px 0"}}>
+        <ul onClick={() => setNavbar(!navbar)} className={`justify-content-center pb-3 mt-8 block ${navbar?'block':'hidden'} transition-all fixed w-full bg-white items-center`} style={{borderRadius:"0 5px 5px 0"}}>
             <li className='text-center font-medium text-gray-600 hover:text-gray-400 hover:text-primary hover:bg-gray-100 border-b-2 border-dashed' style={{whiteSpace:'nowrap'}}><Link href="/">Popular Posts</Link></li>
             <li className='text-center font-medium text-gray-600 hover:text-gray-400 hover:text-primary hover:bg-gray-100 border-b-2 border-dashed'><Link href="/">Resources</Link></li>
             <li className='text-center font-medium text-gray-600 hover:text-gray-400 hover:text-primary hover:bg-gray-100 border-b-2 border-dashed'><Link href="/">Tutorials</Link></li>
