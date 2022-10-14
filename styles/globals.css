@@ -32,7 +32,7 @@
     @apply text-lg font-bold py-2;
   }
   .single-article pre{
-    @apply text-gray-200 bg-gradient-to-l from-primary to-primary-dark my-4 py-4 px-4 overflow-auto scrollbar-w-2;
+    @apply text-gray-200 bg-gradient-to-l from-primary to-primary-dark my-4 py-4 px-4 overflow-auto overflow-x-scroll;
   }
   .single-article blockquote {
     @apply my-4 p-4 border-l-4 bg-gray-100 text-gray-500 border-primary;
