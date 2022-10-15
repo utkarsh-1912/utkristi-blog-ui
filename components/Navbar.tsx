@@ -1,4 +1,4 @@
-import React , {useState} from 'react';
+import React , {useState , useEffect} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useAuth } from '../context/AuthContext';
@@ -6,6 +6,7 @@ import Router from 'next/router';
 
 const Navbar = () => {
   const [navbar,setNavbar] = useState(false);
+  useEffect(()=>{},[navbar]);
   const {user,logout} = useAuth();
   const toLogout = () =>{
      logout();
