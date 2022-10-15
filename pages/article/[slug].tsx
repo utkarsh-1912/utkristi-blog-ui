@@ -17,7 +17,7 @@ interface IPropType {
 const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:1337";
     
 const slug = ({ article, notFound = false }: IPropType) => {
-    const IMAGE_URL = "https://jumpseller.com/images/learn/create-a-blog/blog.jpg"||"/logo.png"||`${API_BASE_URL}${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`
+    const IMAGE_URL = "https://jumpseller.com/images/learn/create-a-blog/blog.jpg"||`${API_BASE_URL}${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`
     return (
         <div className='px-3'>
             <Head>
@@ -49,7 +49,7 @@ const slug = ({ article, notFound = false }: IPropType) => {
                     <div className="text-lg text-gray-600 leading-8">
                         <img
                             className="md:w-full w-auto my-12 mb-6"
-                            src={"/logo.png"||`${API_BASE_URL}${article.attributes.Image.data.attributes.url}`}
+                            src={IMAGE_URL||`${API_BASE_URL}${article.attributes.Image.data.attributes.url}`}
                             alt={article.attributes.Title}
                         />
                         {/* {article.attributes.Body?<MDXRemote
