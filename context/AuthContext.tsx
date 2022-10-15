@@ -1,5 +1,5 @@
 import React, { useContext , createContext , useEffect, useState} from 'react'
-import {GoogleAuthProvider ,GithubAuthProvider, onAuthStateChanged , createUserWithEmailAndPassword, signInWithEmailAndPassword,signInWithPopup,signOut} from 'firebase/auth'
+import {GoogleAuthProvider ,GithubAuthProvider,signInWithRedirect, onAuthStateChanged , createUserWithEmailAndPassword, signInWithEmailAndPassword,signInWithPopup,signOut} from 'firebase/auth'
 import { auth } from '../config/firebase';
 
 const GoProvider = new GoogleAuthProvider();
