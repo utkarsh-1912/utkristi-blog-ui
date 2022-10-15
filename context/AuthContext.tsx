@@ -1,5 +1,5 @@
 import React, { useContext , createContext , useEffect, useState} from 'react'
-import {GoogleAuthProvider ,GithubAuthProvider, onAuthStateChanged , createUserWithEmailAndPassword, signInWithEmailAndPassword,signInWithPopup,signOut} from 'firebase/auth'
+import {GoogleAuthProvider ,GithubAuthProvider, onAuthStateChanged , createUserWithEmailAndPassword, signInWithEmailAndPassword,signInWithRedirect,signOut} from 'firebase/auth'
 import { auth } from '../config/firebase';
 
 const GoProvider = new GoogleAuthProvider();
@@ -19,10 +19,10 @@ const AuthContextProvider = ({children}:{children:React.ReactNode}) => {
        return signInWithEmailAndPassword(auth,email,password);
     };
     const signInWithGoogle = ()=>{
-        return signInWithPopup(auth, GoProvider);
+        return signInWithRedirect(auth, GoProvider);
     }
     const signInWithGit = ()=>{
-        return signInWithPopup(auth, GitProvider);
+        return signInWithRedirect(auth, GitProvider);
     }
     const logout = async ()=>{
        setUser(null);
