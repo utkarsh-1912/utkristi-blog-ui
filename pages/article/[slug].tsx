@@ -18,6 +18,7 @@ const API_BASE_URL = process.env.API_BASE_URL || "http://localhost:1337";
     
 const slug = ({ article, notFound = false }: IPropType) => {
     const IMAGE_URL = "https://jumpseller.com/images/learn/create-a-blog/blog.jpg"||`${API_BASE_URL}${article.attributes.author.data.attributes.avatar.data.attributes.formats.thumbnail.url}`
+    const AVATAR_URL = "/logo.png"
     return (
         <div className='px-3'>
             <Head>
@@ -37,7 +38,7 @@ const slug = ({ article, notFound = false }: IPropType) => {
                     <div className="flex items-center my-4">
                         <div className="rounded-lg overflow-hidden flex items-center justify-center mr-2">
                             <Image
-                                src={IMAGE_URL}
+                                src={AVATAR_URL}
                                 height={40}
                                 width={40}
                                 alt={article.attributes.author.data.attributes.username}
