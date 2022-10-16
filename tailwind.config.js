@@ -11,6 +11,9 @@ module.exports = {
         "primary-dark": "#0d6be8",
         "primary-200": "#acdefa",
       },
+      minHeight: {
+        "min-h-70vh": "70vh",
+      },
     },
     fontFamily: {
       sans: ["Signika", "Quicksand", "Ubuntu", "sans-serif"],

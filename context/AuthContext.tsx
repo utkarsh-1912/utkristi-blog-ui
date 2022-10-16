@@ -1,5 +1,5 @@
 import React, { useContext , createContext , useEffect, useState} from 'react'
-import {GoogleAuthProvider ,GithubAuthProvider,signInWithRedirect, onAuthStateChanged , createUserWithEmailAndPassword, signInWithEmailAndPassword,signInWithPopup,signOut} from 'firebase/auth'
+import {GoogleAuthProvider ,GithubAuthProvider,signInWithRedirect,sendPasswordResetEmail, onAuthStateChanged , createUserWithEmailAndPassword, signInWithEmailAndPassword,signInWithPopup,signOut} from 'firebase/auth'
 import { auth } from '../config/firebase';
 
 const GoProvider = new GoogleAuthProvider();
@@ -28,6 +28,9 @@ const AuthContextProvider = ({children}:{children:React.ReactNode}) => {
        setUser(null);
        await signOut(auth);
     }
+    const resetPassword= async (email:string)=>{
+      await sendPasswordResetEmail(auth,email);
+    }
 
   useEffect(()=>{
     const unsubscribe = onAuthStateChanged(auth,(user)=>{
@@ -45,7 +48,7 @@ const AuthContextProvider = ({children}:{children:React.ReactNode}) => {
     return ()=>unsubscribe();
   },[]);
     return (
-    <AuthContext.Provider value = {{user , login, signin , logout,signInWithGoogle , signInWithGit}}>{loading?null:children}</AuthContext.Provider>
+    <AuthContext.Provider value = {{user , login, signin , signInWithGoogle , signInWithGit,resetPassword,logout}}>{loading?null:children}</AuthContext.Provider>
   )
 };
 
