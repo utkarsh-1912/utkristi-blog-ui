@@ -8,7 +8,7 @@ import { useRouter } from 'next/router'
 import { Toaster } from "react-hot-toast";
 
 
-const noAuthRequired = ['/','/login','/signin'];
+const noAuthRequired = ['/','/login','/signin','/resetPassword'];
 
 function MyApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
