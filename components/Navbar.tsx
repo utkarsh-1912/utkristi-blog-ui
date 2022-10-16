@@ -1,4 +1,4 @@
-import React , {useState , useEffect} from 'react';
+import React , {useState} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useAuth } from '../context/AuthContext';
@@ -6,7 +6,6 @@ import Router from 'next/router';
 
 const Navbar = () => {
   const [navbar,setNavbar] = useState(false);
-  useEffect(()=>{},[navbar]);
   const {user,logout} = useAuth();
   const toLogout = () =>{
      logout();
@@ -71,7 +70,14 @@ const Navbar = () => {
         </ul>
         {user?
         <ul className="flex items-center">
-            <li className='mr-2 font-medium text-gray-600'><button className='rounded-md border border-primary-300 bg-primary py-1 px-4 text-white text-sm font-medium text-white-700 shadow-sm hover:bg-primary-200 transition-all' style={{whiteSpace: "nowrap"}} onClick={toLogout}>Log Out</button></li>
+           <li className='mr-2 font-medium text-gray-600'><button className='rounded-md border border-primary-300 bg-primary py-1 px-4 text-white text-sm font-medium text-white-700 shadow-sm hover:bg-primary-200 transition-all' style={{whiteSpace: "nowrap"}} onClick={toLogout}>Log Out</button></li>
+           <Link href="/dashboard">
+           <div className="cursor-pointer h-8 w-8 md:w-10 md:h-10 bg-sky-50 mx-2 rounded-full shadow-2xl relative flex items-center justify-center text-primary-dark">
+           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 md:h-7 md:w-7" viewBox="0 0 20 20" fill="currentColor">
+          <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+          </svg>
+          </div>
+          </Link>
         </ul>:
         <>
          <ul className="hidden md:flex items-center">
